@@ -1,0 +1,52 @@
+ul.site__header__main-menu {
+  list-style: none;
+  padding:0;
+  margin:0;
+  display:flex;
+  justify-content:flex-end;
+  align-items: center;
+
+  li {
+
+    a {
+      display: block;
+      padding:1.5rem 1.4rem;
+      color:white;
+      text-transform: uppercase;
+      font-weight:bold;
+      @include font-size(13, 13);
+      transition: all 0.4s;
+
+      &:active,
+      &:focus,
+      &:hover {
+        background:rgba($yellow, 0.2);
+        color:$yellow;
+      }
+    }
+
+  }
+
+  li.menu-item--button-primary {
+    margin-left:1rem;
+    background:$yellow;
+
+    a {
+      @extend .btn;
+      @extend .btn--primary;
+      font-size:1.3rem !important;
+      line-height:1 !important;
+    }
+  }
+
+  li.menu-item--button-secondary {
+    margin-left:1rem;
+
+    a {
+      @extend .btn;
+      @extend .btn--secondary;
+      font-size:1.3rem !important;
+      line-height:1 !important;
+    }
+  }
+}

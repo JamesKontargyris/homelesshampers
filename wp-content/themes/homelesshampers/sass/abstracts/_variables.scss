@@ -1,6 +1,6 @@
 // Typography
-$base-font-family: sans-serif;
-$heading-font-family: sans-serif;
+$base-font-family: 'Lato', sans-serif;
+$heading-font-family: 'Playfair Display', serif;
 
 // Font Sizes
 $base-font-size: 1.5rem;
@@ -16,12 +16,10 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Primary Colours
-$red: #cd0f36;
-$green: #00a0a3;
-$blue: #003b77;
-$light-grey: #ebebeb;
-$grey: #9d9d9d;
-$dark-grey: #5a5a5a;
+$yellow: #fedd00;
+$grey: #888b8d;
+$light-grey: #dce2e5;
+$dark-grey: #565859;
 
 // Other Colours
 $white: hsl(0, 0, 100);
@@ -30,8 +28,8 @@ $soft-black: #222222;
 
 // Font Colors
 $base-font-color: $soft-black;
-$action-color: $blue;
-$link-color:$green;
+$action-color: $yellow;
+$link-color:$yellow;
 
 // Border
 $base-border-color: $light-grey;

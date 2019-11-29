@@ -44,7 +44,7 @@ if ( ! function_exists( 'homelesshampers_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'homelesshampers' ),
+			'main-menu' => esc_html__( 'Header', 'homelesshampers' ),
 		) );
 
 		/*
@@ -59,26 +59,9 @@ if ( ! function_exists( 'homelesshampers_setup' ) ) :
 			'caption',
 		) );
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'homelesshampers_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
-
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		/**
-		 * Add support for core custom logo.
-		 *
-		 * @link https://codex.wordpress.org/Theme_Logo
-		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'homelesshampers_setup' );
@@ -96,6 +79,7 @@ function homelesshampers_content_width() {
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'homelesshampers_content_width', 640 );
 }
+
 add_action( 'after_setup_theme', 'homelesshampers_content_width', 0 );
 
 /**
@@ -114,12 +98,14 @@ function homelesshampers_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
+
 add_action( 'widgets_init', 'homelesshampers_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 function homelesshampers_scripts() {
+	wp_enqueue_style( 'homelesshampers-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Playfair+Display:400,400i,700,700i&display=swap' );
 	wp_enqueue_style( 'homelesshampers-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'homelesshampers-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -130,6 +116,7 @@ function homelesshampers_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'homelesshampers_scripts' );
 
 /**
@@ -157,5 +144,32 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+
+// HOMELESS HAMPERS CUSTOM FUNCTIONALITY
+add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2 );
+
+function my_wp_nav_menu_objects( $items, $args ) {
+
+	// loop
+	foreach ( $items as &$item ) {
+
+		// vars
+		$link_type = get_field( 'link_type', $item );
+
+
+		// append icon
+		if ( $link_type) {
+
+			$item->classes = $link_type;
+
+		}
+	}
+
+
+	// return
+	return $items;
+
 }
 

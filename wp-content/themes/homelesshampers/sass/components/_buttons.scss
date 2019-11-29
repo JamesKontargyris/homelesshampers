@@ -1,0 +1,45 @@
+.btn {
+  padding:1.2rem 2.5rem;
+  background:$light-grey;
+  font-weight:900;
+  text-transform: uppercase;
+  @include font-size(14, 16);
+  display: inline-block;
+  transition:0.4s all;
+
+  &:not(:last-of-type) {
+    margin-right:1rem;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background:$yellow;
+  }
+}
+
+.btn--primary {
+  background:$yellow;
+  color:$soft-black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background:shade($yellow, 30%);
+  }
+}
+
+.btn--secondary {
+  background:transparent;
+  border:0.2rem solid $yellow;
+  color:$yellow;
+  padding:1rem 2.5rem; // to allow for border
+
+  &:hover,
+  &:focus,
+  &:active {
+    color:shade($yellow, 30%);
+    border:0.2rem solid shade($yellow, 20%);
+    background: transparent;
+  }
+}
