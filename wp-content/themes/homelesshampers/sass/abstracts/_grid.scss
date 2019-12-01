@@ -33,7 +33,7 @@ $grid-max-width-plus: (
 $grid-desktop: (
         columns: 12,
         gutter: 2.4rem,
-        media: 'screen and (min-width:1025px)',
+        media: 'screen and (min-width:1000px)',
         direction: ltr,
 );
 
@@ -47,14 +47,14 @@ $grid-tablet-plus: (
 $grid-tablet: (
         columns: 12,
         gutter: 2rem,
-        media: 'screen and (min-width:768px) and (max-width:1024px)',
+        media: 'screen and (min-width:768px) and (max-width:999px)',
         direction: ltr,
 );
 
 $grid-tablet-max: (
         columns: 12,
         gutter: 2.4rem,
-        media: 'screen and (max-width:1024px)',
+        media: 'screen and (max-width:999px)',
         direction: ltr,
 );
 

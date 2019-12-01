@@ -28,13 +28,22 @@
 		</div><!-- .site__header__logo -->
 
 		<nav class="site__header__nav">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'homelesshampers' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'main-menu',
-				'menu_class'        => 'site__header__main-menu',
-			) );
-			?>
+
+            <button class="hamburger hamburger--collapse site__header__nav__mobile-menu-toggle" aria-controls="primary-menu" aria-expanded="false" type="button">
+              <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+              </span>
+            </button>
+
+            <div class="site__header__nav__main-menu-container">
+	            <?php
+	            wp_nav_menu( array(
+		            'theme_location' => 'main-menu',
+		            'menu_class'        => 'site__header__main-menu',
+	            ) );
+	            ?>
+            </div>
+
 		</nav><!-- .site__header__nav -->
 
 	</header><!-- .site__header -->

@@ -26,6 +26,7 @@
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
+  transition: 0.4s all;
 
   @include grid-media($grid-max-width-plus) {
     width:24rem;

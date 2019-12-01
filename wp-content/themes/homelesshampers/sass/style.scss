@@ -11,6 +11,8 @@ Text Domain: homelesshampers
 
 /// Third party libraries and stylesheets
 @import
+'vendors/hamburgers/hamburgers-settings',
+'vendors/hamburgers/hamburgers',
 'vendors/bourbon/bourbon',
 'vendors/neat/neat';
 
