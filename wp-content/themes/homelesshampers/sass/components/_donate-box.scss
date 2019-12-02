@@ -1,0 +1,113 @@
+.donate-box {
+  @include container(false);
+  background: $yellow;
+  box-shadow: 0 0.5rem 0.7rem rgba($soft-black, 0.2);
+  padding:3rem 4rem;
+  text-align: center;
+
+  @include grid-media($grid-desktop) {
+    text-align: left;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+  }
+}
+
+.donate-box__title {
+  @include grid-media($grid-desktop) {
+    margin:0;
+    width:15rem;
+  }
+}
+
+.donate-box__blurb {
+  @include grid-media($grid-desktop) {
+    width:30rem;
+    margin-right:5rem;
+
+    p {
+      margin:0;
+    }
+  }
+}
+
+.donate-box__form {
+}
+
+ul.donate-box__form__buttons {
+  list-style: none;
+  margin:0;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  li {
+    margin:0 0.5rem 0.5rem;
+
+    @include grid-media($grid-desktop) {
+      margin-bottom:0;
+    }
+
+    a.donate-box__form__amount-button,
+    button.donate-box__form__submit-button {
+      display: block;
+      background:transparent;
+      font-family: $heading-font-family;
+      color:$soft-black;
+      font-weight:bold;
+      padding:2rem 0;
+      border:0.4rem solid $light-yellow;
+      width:8rem;
+      height:7rem;
+      text-align: center;
+      @include font-size(22, 22);
+      cursor: pointer;
+
+      @include grid-media($grid-desktop) {
+        &:active,
+        &:focus,
+        &:hover {
+          background: $dark-yellow;
+          border-color: white;
+          color:white;
+        }
+      }
+
+      &.is-active {
+        background:$grey;
+        border-color: $grey;
+        color:white;
+        box-shadow:0 0.3rem 0.3rem rgba(black, 0.4);
+
+        &:active,
+        &:focus,
+        &:hover {
+          background:$grey;
+          border-color: $grey;
+        }
+      }
+    }
+    // Submit button overrides
+    button.donate-box__form__submit-button {
+      font-family: $base-font-family;
+      text-transform: uppercase;
+      @include font-size(16, 16);
+      font-weight:bold;
+      border-color: white;
+      background:white;
+      border-radius: 0;
+      transition: all 0.4s;
+
+      @include grid-media($grid-desktop) {
+        &:active,
+        &:focus,
+        &:hover {
+          background: $dark-yellow;
+          border-color: $dark-yellow;
+          color:white;
+        }
+      }
+    }
+  }
+}

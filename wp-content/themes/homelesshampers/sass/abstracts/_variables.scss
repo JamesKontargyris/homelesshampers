@@ -14,6 +14,8 @@ $base-border-radius: 0.4rem;
 $base-spacing: $base-line-height * 1rem;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
+$pad-small: 2rem;
+$pad-large: 4rem;
 
 // Primary Colours
 $yellow: #fedd00;
@@ -24,6 +26,8 @@ $dark-grey: #565859;
 // Other Colours
 $white: hsl(0, 0, 100);
 $soft-black: #222222;
+$light-yellow: #fbea77;
+$dark-yellow: shade($yellow, 30%);
 
 
 // Font Colors
@@ -46,5 +50,8 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 300ms;
 $base-timing: ease;
+
+// Container width
+$max-container-width:1140px;
 
 

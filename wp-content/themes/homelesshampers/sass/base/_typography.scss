@@ -14,6 +14,25 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $base-spacing;
+  font-weight: normal;
+}
+
+h1, .style-as-h1 {
+  @include font-size(60, 64);
+  letter-spacing: -0.2rem;
+
+  @include grid-media($grid-desktop) {
+    @include font-size(78, 82);
+  }
+}
+
+h3, .style-as-h3 {
+  @include font-size(34, 36);
+  letter-spacing: -0.2rem;
+
+  @include grid-media($grid-desktop) {
+    @include font-size(42, 44);
+  }
 }
 
 p {
@@ -47,4 +66,8 @@ picture {
 .text--upper {
   text-transform: uppercase;
   letter-spacing: 0rem;
+}
+
+.text--yellow {
+  color:$yellow;
 }

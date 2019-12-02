@@ -108,3 +108,22 @@
   color: inherit;
   background: none;
 }
+
+// Grid container helper
+@mixin container($include-padding: true) {
+  @include grid-container;
+  max-width:$max-container-width;
+  margin:0 auto;
+
+  @if($include-padding == true) {
+
+    padding-left:$pad-small;
+    padding-right:$pad-small;
+
+    @include grid-media($grid-desktop) {
+      padding-left:$pad-large;
+      padding-right:$pad-large;
+    }
+
+  }
+}

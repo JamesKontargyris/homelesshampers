@@ -6,9 +6,11 @@
   @include font-size(14, 16);
   display: inline-block;
   transition:0.4s all;
+  margin-bottom:$small-spacing;
 
   &:not(:last-of-type) {
-    margin-right:1rem;
+    margin-left:0.5rem;
+    margin-right:0.5rem;
   }
 
   &:hover,
@@ -16,16 +18,31 @@
   &:active {
     background:$yellow;
   }
+
+  &.btn--large {
+    @include grid-media($grid-tablet-plus) {
+      @include font-size(16, 18);
+      padding:1.8rem 4rem;
+    }
+  }
 }
 
 .btn--primary {
   background:$yellow;
-  color:$soft-black;
+  color:$soft-black !important;
 
   &:hover,
   &:focus,
   &:active {
-    background:shade($yellow, 30%);
+    background:$dark-yellow;
+    color:white !important;
+  }
+
+  &.btn--large {
+    @include grid-media($grid-tablet-plus) {
+      @include font-size(16, 18);
+      padding:1.8rem 4rem;
+    }
   }
 }
 
@@ -41,5 +58,12 @@
     color:shade($yellow, 30%);
     border:0.2rem solid shade($yellow, 20%);
     background: transparent;
+  }
+
+  &.btn--large {
+    @include grid-media($grid-tablet-plus) {
+      @include font-size(16, 18);
+      padding:1.6rem 4rem; // to allow for border
+    }
   }
 }
