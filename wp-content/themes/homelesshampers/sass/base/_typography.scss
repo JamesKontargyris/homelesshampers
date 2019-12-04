@@ -24,30 +24,49 @@ h6 {
 }
 
 h1, .style-as-h1 {
-  @include font-size(60, 64);
+  @include font-size(60, 65);
   letter-spacing: -0.2rem;
 
   @include grid-media($grid-desktop) {
-    @include font-size(78, 82);
+    @include font-size(76, 80);
   }
 }
 
 h2, .style-as-h2 {
-  @include font-size(34, 36);
+  @include font-size(41, 45);
   letter-spacing: -0.1rem;
 
   @include grid-media($grid-desktop) {
-    @include font-size(60, 64);
+    @include font-size(60, 65);
     letter-spacing: -0.2rem;
   }
 }
 
 h3, .style-as-h3 {
-  @include font-size(34, 36);
-  letter-spacing: -0.2rem;
+  @include font-size(33, 35);
+  letter-spacing: -0.1rem;
 
   @include grid-media($grid-desktop) {
-    @include font-size(42, 44);
+    @include font-size(46, 50);
+    letter-spacing: -0.2rem;
+  }
+}
+
+h4, .style-as-h4 {
+  @include font-size(27, 30);
+  letter-spacing: -0.1rem;
+
+  @include grid-media($grid-desktop) {
+    @include font-size(42, 45);
+  }
+}
+
+h5, .style-as-h5 {
+  @include font-size(27, 30);
+  letter-spacing: -0.1rem;
+
+  @include grid-media($grid-desktop) {
+    @include font-size(32, 35);
   }
 }
 

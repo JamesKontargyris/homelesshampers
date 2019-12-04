@@ -62,7 +62,7 @@
         </section>
 
         <section class="donate-box">
-            <h3 class="donate-box__title">Donate Today</h3>
+            <h4 class="donate-box__title">Donate Today</h4>
             <div class="donate-box__blurb">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p></div>
             <div class="donate-box__form">
@@ -106,4 +106,25 @@
                     <a href="#" class="btn btn--secondary">Supporters</a>
                 </div>
             </div>
+        </section>
+
+        <section class="photo-gallery">
+            <div class="photo-gallery__yellow-bar"></div>
+            <div class="photo-gallery__title-and-controls">
+                <h4 class="photo-gallery__title">Gallery</h4>
+                <div class="photo-gallery__controls">
+                    <button class="photo-gallery__control photo-gallery__control--prev slick--prev" data-carousel=".photo-gallery__carousel">&lt;</button>
+                    <button class="photo-gallery__control photo-gallery__control--next slick--next" data-carousel=".photo-gallery__carousel">&gt;</button>
+                </div>
+            </div>
+            <ul class="photo-gallery__carousel">
+                <li><img src="https://placeimg.com/600/600/any" alt=""></li>
+                <li><img src="https://placeimg.com/600/600/any" alt=""></li>
+                <li><img src="https://placeimg.com/600/600/any" alt=""></li>
+                <li><img src="https://placeimg.com/600/600/any" alt=""></li>
+                <li><img src="https://placeimg.com/600/600/any" alt=""></li>
+                <li><img src="https://placeimg.com/600/600/any" alt=""></li>
+                <li><img src="https://placeimg.com/600/600/any" alt=""></li>
+                <li><img src="https://placeimg.com/600/600/any" alt=""></li>
+            </ul>
         </section>

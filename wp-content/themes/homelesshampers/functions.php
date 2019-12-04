@@ -106,7 +106,9 @@ add_action( 'widgets_init', 'homelesshampers_widgets_init' );
  */
 function homelesshampers_scripts() {
 	wp_enqueue_style( 'homelesshampers-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i|Playfair+Display:400,400i,600,600i,700,700i&display=swap' );
-	wp_enqueue_style( 'homelesshampers-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'homelesshampers-site-css', get_stylesheet_uri() );
+	wp_enqueue_style( 'homelesshampers-slick-css', get_template_directory_uri() . '/js/slick-1.8.1/slick.css' );
+	wp_enqueue_style( 'homelesshampers-slick-theme-css', get_template_directory_uri() . '/js/slick-1.8.1/slick-theme.css' );
 
 	wp_enqueue_script( 'homelesshampers-jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', array(), '20191201', true );
 	wp_enqueue_script( 'homelesshampers-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -114,6 +116,8 @@ function homelesshampers_scripts() {
 	wp_enqueue_script( 'homelesshampers-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script( 'homelesshampers-main-menu', get_template_directory_uri() . '/js/main-menu.js', array(), '20191201', true );
 	wp_enqueue_script( 'homelesshampers-donate-box', get_template_directory_uri() . '/js/donate-box.js', array(), '20191202', true );
+	wp_enqueue_script( 'homelesshampers-slick-js', get_template_directory_uri() . '/js/slick-1.8.1/slick.min.js', array(), '20191202', true );
+	wp_enqueue_script( 'homelesshampers-slick-carousels', get_template_directory_uri() . '/js/slick-carousels.js', array(), '20191202', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -1,15 +1,19 @@
 .large-feature {
-  padding:$pad-large;
+  padding:$pad-large * 2 $pad-large;
 
   @include grid-media($grid-desktop) {
     display: flex;
     align-items: center;
-    padding:5rem 0;
+    padding:10rem 0;
 
     &.large-feature--image-right {
       flex-direction: row-reverse;
     }
   }
+}
+
+.large-feature + .large-feature {
+  padding-top:0;
 }
 
 .large-feature__image {

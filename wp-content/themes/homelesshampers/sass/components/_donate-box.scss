@@ -8,8 +8,14 @@
   @include grid-media($grid-desktop) {
     text-align: left;
     transform: translateY(-50%);
+    margin-bottom:-7rem; // brings the content after this element up to allow for transform above
     display: flex;
     align-items: center;
+
+    &:after {
+      content: "";
+
+    }
   }
 }
 
