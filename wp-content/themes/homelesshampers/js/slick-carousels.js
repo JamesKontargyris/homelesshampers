@@ -2,7 +2,7 @@
     $('.photo-gallery__carousel').slick({
         dots: false,
         infinite: true,
-        speed: 300,
+        arrows: false,
         slidesToShow: 6,
         slidesToScroll: 1,
         centerMode: true,
@@ -36,6 +36,40 @@
                     slidesToShow: 1,
                 }
             }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
+    $('.supporters-showcase__carousel').slick({
+        dots: false,
+        infinite: true,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 700,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 740,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 570,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
             // You can unslick at a given breakpoint now by adding:
             // settings: "unslick"
             // instead of a settings object

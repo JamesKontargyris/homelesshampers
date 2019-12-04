@@ -81,9 +81,12 @@ a:visited {
   text-decoration: none;
   transition: all $base-duration $base-timing;
 
-  &:active,
-  &:focus,
-  &:hover {
+  @include grid-media($grid-desktop) {
+    &:active,
+    &:focus,
+    &:hover {
+      color: shade($link-color, 30%);
+    }
   }
 }
 

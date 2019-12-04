@@ -1,0 +1,36 @@
+.supporters-showcase {
+  @include container;
+  padding:8rem $pad-small;
+  text-align: center;
+
+  @include grid-media($grid-tablet-plus) {
+    padding:8rem $pad-large;
+  }
+}
+
+.supporters-showcase__title {
+  margin-bottom: 3rem;
+
+  @include grid-media($grid-tablet-plus) {
+    margin-bottom: 5rem;
+  }
+}
+
+ul.supporters-showcase__carousel {
+  list-style: none;
+  padding:0;
+  margin: 0 auto 3rem;
+
+  @include grid-media($grid-tablet-plus) {
+    margin-bottom: 5rem;
+  }
+
+  li {
+    display: inline-block;
+    margin:0 1rem;
+
+    img {
+      margin:0 auto;
+    }
+  }
+}
