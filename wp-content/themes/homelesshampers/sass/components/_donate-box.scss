@@ -24,6 +24,7 @@
   @include grid-media($grid-desktop) {
     width:30rem;
     margin-right:5rem;
+    @include font-size(16, 25);
 
     p {
       margin:0;

@@ -27,6 +27,6 @@
   .hero__blurb {
     color:white;
     margin-bottom:$base-spacing * 2.5;
-    @include font-size(18, 25);
+    line-height:2.5rem;
   }
 }

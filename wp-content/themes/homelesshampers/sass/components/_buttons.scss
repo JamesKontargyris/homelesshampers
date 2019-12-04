@@ -7,11 +7,8 @@
   display: inline-block;
   transition:0.4s all;
   margin-bottom:$small-spacing;
-
-  &:not(:last-of-type) {
-    margin-left:0.5rem;
-    margin-right:0.5rem;
-  }
+  margin-left:0.25rem;
+  margin-right:0.25rem;
 
   &:hover,
   &:focus,

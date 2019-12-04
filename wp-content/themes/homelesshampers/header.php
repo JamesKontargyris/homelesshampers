@@ -64,7 +64,7 @@
         <section class="donate-box">
             <h3 class="donate-box__title">Donate Today</h3>
             <div class="donate-box__blurb">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p></div>
             <div class="donate-box__form">
                 <form action="/" method="POST">
                     <input type="hidden" value="0" class="donate-box__amount-donated">
@@ -74,8 +74,36 @@
                         <li><a href="#" class="donate-box__form__amount-button" data-amount="25">£25</a></li>
                         <li><a href="#" class="donate-box__form__amount-button" data-amount="50">£50</a></li>
                         <li><a href="#" class="donate-box__form__amount-button" data-amount="100">£100</a></li>
-                        <li><button class="donate-box__form__submit-button" type="submit">Next</button> </li>
+                        <li><button class="donate-box__form__submit-button" type="submit">Next &gt;</button> </li>
                     </ul>
                 </form>
+            </div>
+        </section>
+
+        <section class="large-feature large-feature--image-right">
+            <div class="large-feature__image" style="background:url(https://placeimg.com/1500/1000/any) center no-repeat; background-size:cover;"></div>
+            <div class="large-feature__text">
+                <h2 class="large-feature__title">Our mission</h2>
+                <div class="large-feature__blurb">
+                    <p>We provide essentials in the form of hampers to those who are in shelters or on the streets; some of the most vulnerable people in our community. We want to boost our communities engagement with those in need.</p>
+                </div>
+                <div class="large-feature__cta">
+                    <a href="#" class="btn btn--primary">More</a>
+                    <a href="#" class="btn btn--secondary">Supporters</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="large-feature large-feature--image-left">
+            <div class="large-feature__image" style="background:url(https://placeimg.com/1500/1000/any) center no-repeat; background-size:cover;"></div>
+            <div class="large-feature__text">
+                <h2 class="large-feature__title">Our mission</h2>
+                <div class="large-feature__blurb">
+                    <p>We provide essentials in the form of hampers to those who are in shelters or on the streets; some of the most vulnerable people in our community. We want to boost our communities engagement with those in need.</p>
+                </div>
+                <div class="large-feature__cta">
+                    <a href="#" class="btn btn--primary">More</a>
+                    <a href="#" class="btn btn--secondary">Supporters</a>
+                </div>
             </div>
         </section>

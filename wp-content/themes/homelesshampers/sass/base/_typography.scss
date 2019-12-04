@@ -1,7 +1,13 @@
 body {
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: $base-font-size * 0.9;
+  line-height: $base-line-height * 0.9;
+
+  @include grid-media($grid-tablet-plus) {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+  }
 }
 
 h1,
@@ -23,6 +29,16 @@ h1, .style-as-h1 {
 
   @include grid-media($grid-desktop) {
     @include font-size(78, 82);
+  }
+}
+
+h2, .style-as-h2 {
+  @include font-size(34, 36);
+  letter-spacing: -0.1rem;
+
+  @include grid-media($grid-desktop) {
+    @include font-size(60, 64);
+    letter-spacing: -0.2rem;
   }
 }
 
