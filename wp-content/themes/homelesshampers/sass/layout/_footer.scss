@@ -1,0 +1,188 @@
+.site__footer__social-media-donate-container {
+  background: $grey;
+}
+
+.site__footer__social-media-donate-wrapper {
+  @include container;
+  position: relative;
+  padding:3rem 1rem;
+}
+
+.site__footer__social-media {
+  @include grid-media($grid-tablet-plus) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include grid-media($grid-desktop) {
+    justify-content: flex-start;
+  }
+}
+
+.site__footer__social-media__facebook,
+.site__footer__social-media__twitter {
+  margin-bottom: $base-spacing * 1.5;
+  color:white;
+  text-align: center;
+
+  @include grid-media($grid-tablet-plus) {
+    width:50%;
+  }
+
+  @include grid-media($grid-desktop) {
+    text-align: left;
+    width:25%;
+    margin-bottom:0;
+  }
+}
+
+.site__footer__social-media__title {
+  @include font-size(15, 15);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+@include grid-media($grid-desktop) {
+  .site__footer__social-media__title--facebook {
+    padding-left:2.5rem;
+    background:url(img/icon-facebook-white.svg) left top no-repeat;
+    background-size:auto 1.6rem;
+  }
+  .site__footer__social-media__title--twitter {
+    padding-left:2.5rem;
+    background:url(img/icon-twitter-white.svg) left top no-repeat;
+    background-size:auto 1.6rem;
+  }
+
+}
+
+
+.site__footer__social-media__number {
+  font-family: $heading-font-family;
+  @include font-size(80, 80);
+  letter-spacing: -0.2rem;
+  margin-bottom: $base-spacing * 1.5;
+}
+
+.site__footer__donate-box {
+  background:$yellow;
+  padding:3rem;
+  @include font-size(16, 25);
+  box-shadow:0 0.5rem 0.5rem rgba(black, 0.15);
+
+  @include grid-media($grid-desktop) {
+    position: absolute;
+    top:-2rem;
+    bottom:-2rem;
+    right:1rem;
+    width:45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  form.site__footer__donate-box__form {
+    @include grid-media($grid-tablet-plus) {
+      display: flex;
+    }
+
+    input[type=text] {
+      padding:2rem;
+      border:0;
+      color:$grey;
+      @include font-size(20, 20);
+      width:100%;
+      margin-bottom:1rem;
+
+      @include grid-media($grid-tablet-plus) {
+        margin-right:1rem;
+        width:calc(100% - 13rem);
+        margin-bottom: 0;
+      }
+    }
+
+    button[type=submit] {
+      @include button-reset;
+      white-space: nowrap;
+      text-transform: uppercase;
+      font-weight: 900;
+      padding:2rem 0;
+      display: block;
+      width:100%;
+      border:0.2rem solid $soft-black;
+      cursor:pointer;
+
+      @include grid-media($grid-tablet-plus) {
+        width:12rem;
+
+      }
+    }
+  }
+}
+
+.site__footer__legal-container {
+  background:$dark-grey;
+}
+
+.site__footer__legal {
+  @include container;
+  color:white;
+  padding:3rem;
+
+  @include grid-media($grid-desktop) {
+    padding:3rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+  }
+}
+
+.site__footer__legal__copyright {
+  @include font-size(11, 16);
+  text-align: center;
+
+  @include grid-media($grid-desktop) {
+    padding-left:4rem;
+    margin-bottom:0;
+    text-align: left;
+    background: url(img/homelesshampers_logomark_mono_white.svg) left center no-repeat;
+    background-size: contain;
+
+  }
+}
+
+ul.site__footer__legal__menu {
+  @include clearfix;
+  list-style: none;
+  margin-bottom:$base-spacing;
+  padding:0;
+  @include font-size(14, 16);
+  font-weight:900;
+  text-align: center;
+
+  @include grid-media($grid-tablet-plus) {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  @include grid-media($grid-desktop) {
+    margin:0 0 0 auto;
+  }
+
+  li {
+    margin-left:1.5rem;
+
+    a {
+      display: block;
+      padding:1rem;
+
+      @include grid-media($grid-tablet-plus) {
+        padding:0;
+      }
+    }
+  }
+}
