@@ -65,6 +65,7 @@ if ( ! function_exists( 'homelesshampers_setup' ) ) :
 
 		// Image sizes
 		add_image_size('banner', 1500, 1000, true);
+		add_image_size('photo-gallery-thumb', 600, 600, true);
 
 	}
 endif;
@@ -113,8 +114,10 @@ function homelesshampers_scripts() {
 	wp_enqueue_style( 'homelesshampers-site-css', get_stylesheet_uri() );
 	wp_enqueue_style( 'homelesshampers-slick-css', get_template_directory_uri() . '/js/slick-1.8.1/slick.css' );
 	wp_enqueue_style( 'homelesshampers-slick-theme-css', get_template_directory_uri() . '/js/slick-1.8.1/slick-theme.css' );
+	wp_enqueue_style( 'homelesshampers-featherlight-lightbox-css', get_template_directory_uri() . '/js/featherlight-1.7.13/featherlight.min.css' );
 
 	wp_enqueue_script( 'homelesshampers-jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', array(), '20191201', true );
+	wp_enqueue_script( 'homelesshampers-featherlight-lightbox', get_template_directory_uri() . '/js/featherlight-1.7.13/featherlight.min.js', array(), '20191212', true );
 	wp_enqueue_script( 'homelesshampers-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'homelesshampers-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

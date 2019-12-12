@@ -34,6 +34,8 @@ get_header();
 
 			<?php get_template_part( 'template-parts/partials/partial', 'photo-gallery' ); ?>
 
+            <?php get_template_part( 'template-parts/partials/partial', 'supporters-carousel' ); ?>
+
         </main><!-- #main -->
     </div><!-- #primary -->
 
