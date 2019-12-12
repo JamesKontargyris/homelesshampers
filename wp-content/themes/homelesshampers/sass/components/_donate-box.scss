@@ -71,7 +71,7 @@ ul.donate-box__form__buttons {
       @include font-size(22, 22);
       cursor: pointer;
 
-      @include grid-media($grid-desktop) {
+      @include no-touch {
         &:active,
         &:focus,
         &:hover {
@@ -87,12 +87,15 @@ ul.donate-box__form__buttons {
         color:white;
         box-shadow:0 0.3rem 0.3rem rgba(black, 0.4);
 
-        &:active,
-        &:focus,
-        &:hover {
-          background:$grey;
-          border-color: $grey;
+        @include no-touch {
+          &:active,
+          &:focus,
+          &:hover {
+            background:$grey;
+            border-color: $grey;
+          }
         }
+
       }
     }
     // Submit button overrides
@@ -106,7 +109,7 @@ ul.donate-box__form__buttons {
       border-radius: 0;
       transition: all 0.4s;
 
-      @include grid-media($grid-desktop) {
+      @include no-touch {
         &:active,
         &:focus,
         &:hover {

@@ -28,11 +28,13 @@
   background:$yellow;
   color:$soft-black !important;
 
-  &:hover,
-  &:focus,
-  &:active {
-    background:$dark-yellow;
-    color:white !important;
+  @include no-touch {
+    &:hover,
+    &:focus,
+    &:active {
+      background:$dark-yellow;
+      color:white !important;
+    }
   }
 
   &.btn--large {
@@ -49,12 +51,14 @@
   color:$yellow;
   padding:1rem 2.5rem; // to allow for border
 
-  &:hover,
-  &:focus,
-  &:active {
-    color:shade($yellow, 30%);
-    border:0.2rem solid shade($yellow, 20%);
-    background: transparent;
+  @include no-touch {
+    &:hover,
+    &:focus,
+    &:active {
+      color:shade($yellow, 30%);
+      border:0.2rem solid shade($yellow, 20%);
+      background: transparent;
+    }
   }
 
   &.btn--large {

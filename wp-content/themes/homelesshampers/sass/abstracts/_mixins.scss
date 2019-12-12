@@ -127,3 +127,12 @@
 
   }
 }
+
+// Touch / no-touch media queries
+@mixin no-touch {
+  @media (hover:hover) { @content; }
+}
+
+@mixin touch {
+  @media (hover:none) { @content; }
+}

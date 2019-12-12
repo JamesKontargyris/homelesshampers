@@ -57,7 +57,7 @@
   transition: 0.4s all;
   cursor: pointer;
 
-  @include grid-media($grid-desktop) {
+  @include no-touch {
     &:active,
     &:focus,
     &:hover {
@@ -76,5 +76,19 @@ ul.photo-gallery__carousel {
   li {
     display: inline-block;
     margin:1rem;
+
+    img {
+      transition: 0.3s all;
+    }
+
+    @include no-touch {
+      a:focus,
+      a:active,
+      a:hover {
+        img {
+          opacity:0.4;
+        }
+      }
+    }
   }
 }

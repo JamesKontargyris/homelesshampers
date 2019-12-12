@@ -29,7 +29,7 @@ ul.supporters-showcase__carousel {
     display: inline-block;
     margin:0 1rem;
 
-    @include grid-media($grid-desktop) {
+    @include no-touch {
 
       a:focus,
       a:active,

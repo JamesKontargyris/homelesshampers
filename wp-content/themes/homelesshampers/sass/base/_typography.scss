@@ -81,7 +81,7 @@ a:visited {
   text-decoration: none;
   transition: all $base-duration $base-timing;
 
-  @include grid-media($grid-desktop) {
+  @include no-touch {
     &:active,
     &:focus,
     &:hover {
