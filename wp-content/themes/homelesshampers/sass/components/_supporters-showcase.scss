@@ -29,8 +29,21 @@ ul.supporters-showcase__carousel {
     display: inline-block;
     margin:0 1rem;
 
+    @include grid-media($grid-desktop) {
+
+      a:focus,
+      a:active,
+      a:hover {
+        img {
+          opacity:0.4;
+        }
+      }
+
+    }
+
     img {
       margin:0 auto;
+      transition: 0.3s all;
     }
   }
 }

@@ -66,6 +66,7 @@ if ( ! function_exists( 'homelesshampers_setup' ) ) :
 		// Image sizes
 		add_image_size('banner', 1500, 1000, true);
 		add_image_size('photo-gallery-thumb', 600, 600, true);
+		add_image_size('supporters-showcase', 150, 100, false);
 
 	}
 endif;
