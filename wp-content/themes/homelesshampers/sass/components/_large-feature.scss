@@ -68,6 +68,11 @@
       background: $yellow;
     }
   }
+
+  strong {
+    font-weight:normal;
+    color:$yellow;
+  }
 }
 
 .large-feature__blurb {

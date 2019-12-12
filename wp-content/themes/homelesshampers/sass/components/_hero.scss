@@ -22,6 +22,11 @@
     @extend .style-as-h1;
     color:white;
     margin-bottom:$base-spacing * 2.5;
+
+    strong { // highlight anything in <strong> tags
+      font-weight:normal;
+      color:$yellow;
+    }
   }
 
   .hero__blurb {

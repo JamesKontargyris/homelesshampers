@@ -44,7 +44,8 @@ if ( ! function_exists( 'homelesshampers_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'main-menu' => esc_html__( 'Header', 'homelesshampers' ),
+			'main-menu'   => esc_html__( 'Header', 'homelesshampers' ),
+			'footer-menu' => esc_html__( 'Footer', 'homelesshampers' ),
 		) );
 
 		/*
@@ -61,6 +62,9 @@ if ( ! function_exists( 'homelesshampers_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// Image sizes
+		add_image_size('banner', 1500, 1000, true);
 
 	}
 endif;
@@ -167,7 +171,7 @@ function my_wp_nav_menu_objects( $items, $args ) {
 
 
 		// append icon
-		if ( $link_type) {
+		if ( $link_type ) {
 
 			$item->classes = $link_type;
 

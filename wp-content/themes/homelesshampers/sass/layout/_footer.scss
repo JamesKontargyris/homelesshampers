@@ -112,10 +112,21 @@
       width:100%;
       border:0.2rem solid $soft-black;
       cursor:pointer;
+      transition: 0.4s all;
 
       @include grid-media($grid-tablet-plus) {
         width:12rem;
 
+      }
+
+      @include grid-media($grid-desktop) {
+        &:active,
+        &:focus,
+        &:hover {
+          background: $dark-yellow;
+          border-color: $dark-yellow;
+          color:white;
+        }
       }
     }
   }
@@ -126,7 +137,8 @@
 }
 
 .site__footer__legal {
-  @include container;
+  max-width:$max-container-width;
+  margin:0 auto;
   color:white;
   padding:3rem;
 

@@ -65,7 +65,7 @@ ul.donate-box__form__buttons {
       font-weight:bold;
       padding:2rem 0;
       border:0.4rem solid $light-yellow;
-      width:8rem;
+      min-width:8rem;
       height:7rem;
       text-align: center;
       @include font-size(22, 22);

@@ -20,12 +20,16 @@
 
             <div class="site__footer__social-media">
                 <div class="site__footer__social-media__facebook">
-                    <div class="site__footer__social-media__title site__footer__social-media__title--facebook">Facebook Likes</div>
+                    <div class="site__footer__social-media__title site__footer__social-media__title--facebook">Facebook
+                        Likes
+                    </div>
                     <p class="site__footer__social-media__number">6,458</p>
                     <a href="#" class="btn btn--secondary">Like our page</a>
                 </div>
                 <div class="site__footer__social-media__twitter">
-                    <div class="site__footer__social-media__title site__footer__social-media__title--twitter">Twitter Followers</div>
+                    <div class="site__footer__social-media__title site__footer__social-media__title--twitter">Twitter
+                        Followers
+                    </div>
                     <p class="site__footer__social-media__number">199</p>
                     <a href="#" class="btn btn--secondary">Follow us</a>
                 </div>
@@ -33,7 +37,8 @@
             </div>
             <div class="site__footer__donate-box">
                 <h5>Donate today</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore.</p>
                 <form action="/" method="POST" class="site__footer__donate-box__form">
                     <input type="text" name="amount" placeholder="Enter amount...">
                     <button type="submit">Donate &gt;</button>
@@ -46,13 +51,12 @@
     <div class="site__footer__legal-container">
         <div class="site__footer__legal">
 
-            <ul class="site__footer__legal__menu">
-                <li><a href="#">Our Mission</a></li>
-                <li><a href="#">Supporters</a></li>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Get Involved</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'footer-menu',
+				'menu_class'     => 'site__footer__legal__menu',
+			) );
+			?>
 
             <div class="site__footer__legal__copyright">
                 &copy; Homeless Hampers 2019. All rights reserved.<br>Registered charity number 12345678. <a
