@@ -9,9 +9,7 @@
  * @package homelesshampers
  */
 
-$homepage = get_page_by_path('/');
-$homepage_id = $homepage->ID; // footer fields are managed on the homepage in the CMS
-
+$homepage_id = get_option( 'page_on_front' ); // footer fields are managed on the homepage in the CMS
 ?>
 
 </div><!-- #content -->

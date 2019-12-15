@@ -1,0 +1,22 @@
+.lead-paragraph {
+  max-width:$text-column-width;
+  margin:0 3rem 5rem;
+  border-left:1rem solid $yellow;
+  padding-left:2rem;
+  font-family: $heading-font-family;
+  color:$grey;
+  @include font-size(24, 34);
+
+  p {
+    padding:0 2rem 0 0; // counteracts page__content styles in _typography.scss
+  }
+
+  @include grid-media($grid-desktop) {
+    @include font-size(38, 60);
+    margin:0 auto 11rem;
+  }
+
+  strong {
+    color:black;
+  }
+}

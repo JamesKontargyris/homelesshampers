@@ -1,10 +1,12 @@
 .large-feature {
-  padding:$pad-large * 2 $pad-large;
+  margin:$pad-large 0;
+  padding:$pad-large;
 
   @include grid-media($grid-desktop) {
     display: flex;
     align-items: center;
-    padding:10rem 0;
+    margin:10rem 0;
+    padding:0;
 
     &.large-feature--image-right {
       flex-direction: row-reverse;
@@ -13,7 +15,7 @@
 }
 
 .large-feature + .large-feature {
-  padding-top:0;
+  margin-top:0;
 }
 
 .large-feature__image {
@@ -28,6 +30,7 @@
   @include grid-media($grid-desktop) {
     height:53rem;
     width:50%;
+    margin-bottom: 0;
   }
 }
 
@@ -53,7 +56,7 @@
 .large-feature__title {
   @include grid-media($grid-desktop) {
     position: relative;
-    padding-bottom:6rem;
+    padding-bottom:6rem !important; // counteracts page__content styles in _typography.scss
     margin-bottom:0;
     &:after {
       content: " ";
@@ -73,6 +76,10 @@
 }
 
 .large-feature__blurb {
+  p {
+    padding:0 2rem 0 0; // counteracts page__content styles in _typography.scss
+  }
+
   @include grid-media($grid-desktop) {
     margin-bottom:4rem;
   }
@@ -86,4 +93,32 @@
     }
   }
 
+}
+
+
+// Variations
+.large-feature--yellow {
+  background:$yellow;
+
+  .large-feature__title {
+    @include grid-media($grid-desktop) {
+      &:after {
+        background: white;
+      }
+    }
+  }
+
+  .btn--primary,
+  .btn--secondary {
+    @extend .btn--white;
+  }
+}
+
+.large-feature--grey {
+  background:$grey;
+
+  .large-feature__title,
+  .large-feature__blurb {
+    color:white;
+  }
 }

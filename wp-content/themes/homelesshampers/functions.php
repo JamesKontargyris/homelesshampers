@@ -73,6 +73,18 @@ endif;
 add_action( 'after_setup_theme', 'homelesshampers_setup' );
 
 /**
+ * Sets up support for editor styles and imports them.
+ */
+function editor_styles_setup() {
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+
+	// Enqueue editor styles.
+	add_editor_style( 'editor-style.css' );
+}
+add_action( 'after_setup_theme', 'editor_styles_setup' );
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.

@@ -1,0 +1,40 @@
+.large-feature {
+  padding:10px;
+}
+
+.large-feature__image {
+  width:100%;
+  height:18rem;
+}
+
+// Variations
+.large-feature--white {
+  border:1px solid $light-grey;
+}
+
+.large-feature--yellow {
+  background:$yellow;
+
+  .large-feature__title {
+    @include grid-media($grid-desktop) {
+      &:after {
+        background: white;
+      }
+    }
+  }
+
+  .btn--primary,
+  .btn--secondary {
+    @extend .btn--white;
+  }
+}
+
+.large-feature--grey {
+  background:$grey;
+
+  .large-feature__title,
+  .large-feature__blurb,
+  .large-feature__meta {
+    color:white;
+  }
+}

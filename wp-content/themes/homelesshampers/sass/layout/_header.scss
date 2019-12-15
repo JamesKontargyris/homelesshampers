@@ -18,6 +18,7 @@
 
 .site__header__logo {
   position: relative;
+  z-index: z('high');
 }
 
 .site__header__logo__image {

@@ -1,5 +1,9 @@
 .site__footer {
-  margin-top:$base-spacing * 2;
+  margin-top:$base-spacing * 6;
+
+  @include grid-media($grid-desktop) {
+    margin-top:$base-spacing * 8;
+  }
 }
 
 .site__footer__social-media-donate-container {
@@ -9,7 +13,11 @@
 .site__footer__social-media-donate-wrapper {
   @include container;
   position: relative;
-  padding:3rem 1rem;
+  padding:3rem 1rem 1rem;
+
+  @include grid-media($grid-desktop) {
+    padding:3rem 1rem;
+  }
 }
 
 .site__footer__social-media {

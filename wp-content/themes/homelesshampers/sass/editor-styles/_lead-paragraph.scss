@@ -1,0 +1,13 @@
+.lead-paragraph {
+  border-left:10px solid $yellow;
+  padding-left:20px;
+  font-family: $heading-font-family;
+  color:$grey;
+  font-size:38px;
+  line-height: 60px;
+  margin-bottom:50px;
+
+  strong {
+    color:black;
+  }
+}

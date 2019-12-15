@@ -10,10 +10,12 @@
   margin-left:0.25rem;
   margin-right:0.25rem;
 
-  &:hover,
-  &:focus,
-  &:active {
-    background:$yellow;
+  @include no-touch {
+    &:hover,
+    &:focus,
+    &:active {
+      background:$yellow;
+    }
   }
 
   &.btn--large {
@@ -43,6 +45,19 @@
       padding:1.8rem 4rem;
     }
   }
+
+  &.btn--white {
+    background:white;
+
+    @include no-touch {
+      &:hover,
+      &:focus,
+      &:active {
+        background:$dark-yellow;
+        color:white !important;
+      }
+    }
+  }
 }
 
 .btn--secondary {
@@ -65,6 +80,21 @@
     @include grid-media($grid-tablet-plus) {
       @include font-size(16, 18);
       padding:1.6rem 4rem; // to allow for border
+    }
+  }
+
+  &.btn--white {
+    border-color: white;
+    color:white;
+
+    @include no-touch {
+      &:hover,
+      &:focus,
+      &:active {
+        color:shade($yellow, 30%);
+        border:0.2rem solid shade($yellow, 20%);
+        background: transparent;
+      }
     }
   }
 }

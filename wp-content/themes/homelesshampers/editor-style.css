@@ -1,0 +1,323 @@
+/*
+Theme Name: HomelessHampers
+Author: James Kontargyris
+Author URI: http://jameskontargyris.co.uk/
+Description: Homeless Hampers Wordpress editor styles
+Version: 1.0
+Text Domain: homelesshampers
+*/
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */.hamburger{padding:1.5rem 0;display:inline-block;cursor:pointer;transition-property:opacity,filter;transition-duration:.15s;transition-timing-function:linear;font:inherit;color:inherit;text-transform:none;background-color:transparent;border:0;margin:0;overflow:visible}.hamburger.is-active:hover,.hamburger:hover{opacity:1}.hamburger.is-active .hamburger-inner,.hamburger.is-active .hamburger-inner:after,.hamburger.is-active .hamburger-inner:before{background-color:#fff}.hamburger-box{width:3rem;height:2.1rem;display:inline-block;position:relative}.hamburger-inner{display:block;top:50%;margin-top:-.15rem}.hamburger-inner,.hamburger-inner:after,.hamburger-inner:before{width:3rem;height:.3rem;background-color:#fff;border-radius:.4rem;position:absolute;transition-property:transform;transition-duration:.15s;transition-timing-function:ease}.hamburger-inner:after,.hamburger-inner:before{content:"";display:block}.hamburger-inner:before{top:-.9rem}.hamburger-inner:after{bottom:-.9rem}
+
+/*
+   * Collapse
+   */.hamburger--collapse .hamburger-inner{top:auto;bottom:0;transition-duration:.13s;transition-delay:.13s;transition-timing-function:cubic-bezier(.55,.055,.675,.19)}.hamburger--collapse .hamburger-inner:after{top:-1.8rem;transition:top .2s cubic-bezier(.33333,.66667,.66667,1) .2s,opacity .1s linear}.hamburger--collapse .hamburger-inner:before{transition:top .12s cubic-bezier(.33333,.66667,.66667,1) .2s,transform .13s cubic-bezier(.55,.055,.675,.19)}.hamburger--collapse.is-active .hamburger-inner{transform:translate3d(0,-.9rem,0) rotate(-45deg);transition-delay:.22s;transition-timing-function:cubic-bezier(.215,.61,.355,1)}.hamburger--collapse.is-active .hamburger-inner:after{top:0;opacity:0;transition:top .2s cubic-bezier(.33333,0,.66667,.33333),opacity .1s linear .22s}.hamburger--collapse.is-active .hamburger-inner:before{top:0;transform:rotate(-90deg);transition:top .1s cubic-bezier(.33333,0,.66667,.33333) .16s,transform .13s cubic-bezier(.215,.61,.355,1) .25s}
+
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-enable */html{font-family:sans-serif;-ms-text-size-adjust:100%;font-size:62.5%}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}b,strong{font-weight:inherit}dfn{font-style:italic}mark{background-color:#ff0;color:#000}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}button,input,optgroup,select,textarea{font:inherit}optgroup{font-weight:700}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+	 ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */html{line-height:1.15;
+  /* 1 */-webkit-text-size-adjust:100%
+  /* 2 */}
+
+/* Sections
+	 ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */body{margin:0}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */h1{font-size:2em;margin:.67em 0}
+
+/* Grouping content
+	 ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */hr{box-sizing:content-box;
+  /* 1 */height:0;
+  /* 1 */overflow:visible
+  /* 2 */}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */pre{font-family:monospace,monospace;
+  /* 1 */font-size:1em
+  /* 2 */}
+
+/* Text-level semantics
+	 ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */a{background-color:transparent}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */abbr[title]{border-bottom:none;
+  /* 1 */text-decoration:underline;
+  /* 2 */text-decoration:underline dotted
+  /* 2 */}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */b,strong{font-weight:bolder}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */code,kbd,samp{font-family:monospace,monospace;
+  /* 1 */font-size:1em
+  /* 2 */}
+
+/**
+ * Add the correct font size in all browsers.
+ */small{font-size:80%}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}
+
+/* Embedded content
+	 ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */img{border-style:none}
+
+/* Forms
+	 ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */button,input,optgroup,select,textarea{font-family:inherit;
+  /* 1 */font-size:100%;
+  /* 1 */line-height:1.15;
+  /* 1 */margin:0
+  /* 2 */}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */button,input{
+  /* 1 */overflow:visible}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */button,select{
+  /* 1 */text-transform:none}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}
+
+/**
+ * Correct the padding in Firefox.
+ */fieldset{padding:.35em .75em .625em}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *		`fieldset` elements in all browsers.
+ */legend{box-sizing:border-box;
+  /* 1 */color:inherit;
+  /* 2 */display:table;
+  /* 1 */max-width:100%;
+  /* 1 */padding:0;
+  /* 3 */white-space:normal
+  /* 1 */}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */progress{vertical-align:baseline}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */textarea{overflow:auto}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */[type=checkbox],[type=radio]{box-sizing:border-box;
+  /* 1 */padding:0
+  /* 2 */}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */[type=search]{-webkit-appearance:textfield;
+  /* 1 */outline-offset:-2px
+  /* 2 */}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */::-webkit-file-upload-button{-webkit-appearance:button;
+  /* 1 */font:inherit
+  /* 2 */}
+
+/* Interactive
+	 ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */details{display:block}
+
+/*
+ * Add the correct display in all browsers.
+ */summary{display:list-item}
+
+/* Misc
+	 ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+
+/**
+ * Add the correct display in IE 10.
+ */[hidden],template{display:none}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/body,button,input,optgroup,select,textarea{color:#404040;font-family:sans-serif;font-size:16px;font-size:1rem;line-height:1.5}h1,h2,h3,h4,h5,h6{clear:both}p{margin-bottom:1.5em}cite,dfn,em,i{font-style:italic}blockquote{margin:0 1.5em}address{margin:0 0 1.5em}pre{background:#eee;font-family:Courier\ 10 Pitch,Courier,monospace;line-height:1.6;margin-bottom:1.6em;max-width:100%;overflow:auto;padding:1.6em}code,kbd,pre,tt,var{font-size:15px;font-size:.9375rem}code,kbd,tt,var{font-family:Monaco,Consolas,Andale Mono,DejaVu Sans Mono,monospace}abbr,acronym{border-bottom:1px dotted #666;cursor:help}ins,mark{background:#fff9c0;text-decoration:none}big{font-size:125%}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/html{box-sizing:border-box}*,:after,:before{
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */box-sizing:inherit}body{background:#fff
+  /* Fallback for when there is no custom background color defined. */}hr{background-color:#ccc;border:0;height:1px;margin-bottom:1.5em}ol,ul{margin:0 0 1.5em 3em}ul{list-style:disc}ol{list-style:decimal}li>ol,li>ul{margin-bottom:0;margin-left:1.5em}dt{font-weight:700}dd{margin:0 1.5em 1.5em}img{height:auto;
+  /* Make sure images are scaled correctly. */max-width:100%
+  /* Adhere to container width. */}figure{margin:1em 0
+  /* Extra wide images within figure tags don't overflow the content area. */}table{margin:0 0 1.5em;width:100%}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/button,input[type=button],input[type=reset],input[type=submit]{border:1px solid;border-color:#ccc #ccc #bbb;border-radius:3px;background:#e6e6e6;color:rgba(0,0,0,.8);font-size:12px;font-size:.75rem;line-height:1;padding:.6em 1em .4em}button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]:hover{border-color:#ccc #bbb #aaa}button:active,button:focus,input[type=button]:active,input[type=button]:focus,input[type=reset]:active,input[type=reset]:focus,input[type=submit]:active,input[type=submit]:focus{border-color:#aaa #bbb #bbb}input[type=color],input[type=date],input[type=datetime-local],input[type=datetime],input[type=email],input[type=month],input[type=number],input[type=password],input[type=range],input[type=search],input[type=tel],input[type=text],input[type=time],input[type=url],input[type=week],textarea{color:#666;border:1px solid #ccc;border-radius:3px;padding:3px}input[type=color]:focus,input[type=date]:focus,input[type=datetime-local]:focus,input[type=datetime]:focus,input[type=email]:focus,input[type=month]:focus,input[type=number]:focus,input[type=password]:focus,input[type=range]:focus,input[type=search]:focus,input[type=tel]:focus,input[type=text]:focus,input[type=time]:focus,input[type=url]:focus,input[type=week]:focus,textarea:focus{color:#111}select{border:1px solid #ccc}textarea{width:100%}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/a{color:#4169e1}a:visited{color:purple}a:active,a:focus,a:hover{color:#191970}a:focus{outline:thin dotted}a:active,a:hover{outline:0}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/.main-navigation{clear:both;display:block;float:left;width:100%}.main-navigation ul{display:none;list-style:none;margin:0;padding-left:0}.main-navigation ul ul{box-shadow:0 3px 3px rgba(0,0,0,.2);float:left;position:absolute;top:100%;left:-999em;z-index:3}.main-navigation ul ul ul{left:-999em;top:0}.main-navigation ul ul li.focus>ul,.main-navigation ul ul li:hover>ul{left:100%}.main-navigation ul ul a{width:200px}.main-navigation ul li.focus>ul,.main-navigation ul li:hover>ul{left:auto}.main-navigation li{float:left;position:relative}.main-navigation a{display:block;text-decoration:none}
+
+/* Small menu. */.main-navigation.toggled ul,.menu-toggle{display:block}@media screen and (min-width:37.5em){.menu-toggle{display:none}.main-navigation ul{display:block}}.site-main .comment-navigation,.site-main .post-navigation,.site-main .posts-navigation{margin:0 0 1.5em;overflow:hidden}.comment-navigation .nav-previous,.post-navigation .nav-previous,.posts-navigation .nav-previous{float:left;width:50%}.comment-navigation .nav-next,.post-navigation .nav-next,.posts-navigation .nav-next{float:right;text-align:right;width:50%}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);-webkit-clip-path:inset(50%);clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute!important;width:1px;word-wrap:normal!important
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */}.screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,.6);clip:auto!important;-webkit-clip-path:none;clip-path:none;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:700;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:4
+  /* Above WP toolbar. */}
+
+/* Do not show the outline on the skip link target. */#content[tabindex="-1"]:focus{outline:0}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/.alignleft{display:inline;float:left;margin-right:1.5em}.alignright{display:inline;float:right;margin-left:1.5em}.aligncenter{clear:both;display:block;margin-left:auto;margin-right:auto}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/.clear:after,.clear:before,.comment-content:after,.comment-content:before,.entry-content:after,.entry-content:before,.site-content:after,.site-content:before,.site-footer:after,.site-footer:before,.site-header:after,.site-header:before{content:"";display:table;table-layout:fixed}.clear:after,.comment-content:after,.entry-content:after,.site-content:after,.site-footer:after,.site-header:after{clear:both}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/.widget{margin:0 0 1.5em
+  /* Make sure select elements fit in widgets. */}.widget select{max-width:100%}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/.sticky{display:block}.page,.post{margin:0 0 1.5em}.updated:not(.published){display:none}.entry-content,.entry-summary,.page-content{margin:1.5em 0 0}.page-links{clear:both;margin:0 0 1.5em}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/.comment-content a{word-wrap:break-word}.bypostauthor{display:block}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */.infinite-scroll.neverending .site-footer,.infinite-scroll .posts-navigation{
+  /* Theme Footer (when set to scrolling) */display:none}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */.infinity-end.neverending .site-footer{display:block}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/.comment-content .wp-smiley,.entry-content .wp-smiley,.page-content .wp-smiley{border:none;margin-bottom:0;margin-top:0;padding:0}
+
+/* Make sure embeds and iframes fit their containers. */embed,iframe,object{max-width:100%}
+
+/* Make sure logo link wraps around logo image. */.custom-logo-link{display:inline-block}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/.wp-caption{margin-bottom:1.5em;max-width:100%}.wp-caption img[class*=wp-image-]{display:block;margin-left:auto;margin-right:auto}.wp-caption .wp-caption-text{margin:.8075em 0}.wp-caption-text{text-align:center}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/.gallery{margin-bottom:1.5em}.gallery-item{display:inline-block;text-align:center;vertical-align:top;width:100%}.gallery-columns-2 .gallery-item{max-width:50%}.gallery-columns-3 .gallery-item{max-width:33.33%}.gallery-columns-4 .gallery-item{max-width:25%}.gallery-columns-5 .gallery-item{max-width:20%}.gallery-columns-6 .gallery-item{max-width:16.66%}.gallery-columns-7 .gallery-item{max-width:14.28%}.gallery-columns-8 .gallery-item{max-width:12.5%}.gallery-columns-9 .gallery-item{max-width:11.11%}.gallery-caption{display:block}*{z-index:1}body,html{min-height:100%}body{overflow-x:hidden}.page,.post{margin:0}body{font-size:1.62rem;line-height:1.4994}@media screen and (min-width:768px){body{font-size:1.8rem;line-height:1.666}}h1,h2,h3,h4,h5,h6{font-family:Playfair Display,serif;font-size:1.8rem;line-height:1.2;margin:0 0 1.666rem;font-weight:400}.style-as-h1,h1{font-size:48px;line-height:52px;font-size:4.8rem;line-height:5.2rem;letter-spacing:-.2rem}@media screen and (min-width:768px){.style-as-h1,h1{font-size:56px;line-height:60px;font-size:5.6rem;line-height:6rem}}@media screen and (min-width:1000px){.style-as-h1,h1{font-size:76px;line-height:80px;font-size:7.6rem;line-height:8rem;letter-spacing:-.4rem}}.style-as-h2,h2{font-size:41px;line-height:45px;font-size:4.1rem;line-height:4.5rem;letter-spacing:-.1rem}@media screen and (min-width:1000px){.style-as-h2,h2{font-size:60px;line-height:65px;font-size:6rem;line-height:6.5rem;letter-spacing:-.2rem}}.style-as-h3,h3{font-size:36px;line-height:40px;font-size:3.6rem;line-height:4rem;letter-spacing:-.1rem}@media screen and (min-width:1000px){.style-as-h3,h3{font-size:52px;line-height:56px;font-size:5.2rem;line-height:5.6rem;letter-spacing:-.2rem}}.style-as-h4,h4{font-size:27px;line-height:30px;font-size:2.7rem;line-height:3rem;letter-spacing:-.1rem}@media screen and (min-width:1000px){.style-as-h4,h4{font-size:42px;line-height:45px;font-size:4.2rem;line-height:4.5rem}}.style-as-h5,h5{font-size:27px;line-height:30px;font-size:2.7rem;line-height:3rem;letter-spacing:-.1rem;margin-bottom:4rem}@media screen and (min-width:1000px){.style-as-h5,h5{font-size:32px;line-height:35px;font-size:3.2rem;line-height:3.5rem}}.style-as-h6,h6{font-size:18px;line-height:22px;font-size:1.8rem;line-height:2.2rem}@media screen and (min-width:1000px){.style-as-h6,h6{font-size:24px;line-height:28px;font-size:2.4rem;line-height:2.8rem}}p{margin-bottom:1.666rem}a:link,a:visited{color:#f6d500;text-decoration:none;transition:all .3s ease}@media (hover:hover){a:link:active,a:link:focus,a:link:hover,a:visited:active,a:visited:focus,a:visited:hover{color:#ac9500}}ol,ul{margin-left:0}img,picture{margin:0;max-width:100%}.page__content h1,.page__content h2,.page__content h3,.page__content h4,.page__content h5,.page__content h6,.page__content p{max-width:752px;margin-left:auto;margin-right:auto;padding:0 3rem}@media screen and (min-width:1000px){.page__content h1,.page__content h2,.page__content h3,.page__content h4,.page__content h5,.page__content h6,.page__content p{padding:0}}.text--upper{text-transform:uppercase;letter-spacing:0}.text--yellow{color:#f6d500}.site__header__nav__main-menu-container:after{clear:both;content:"";display:block}@media screen and (max-width:999px){.site__header__nav__main-menu-container{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,.85);padding:2rem}}ul.site__header__main-menu{list-style:none;padding:0;margin:0}@media screen and (max-width:999px){ul.site__header__main-menu{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;height:calc(100vh - 4rem)}}@media screen and (min-width:1000px){ul.site__header__main-menu{display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end;-ms-flex-align:center;align-items:center}}@media screen and (max-width:999px){ul.site__header__main-menu li{display:block;width:100%;text-align:center;margin-bottom:1.666rem}}ul.site__header__main-menu li a{display:block;padding:1.5rem 1.4rem;color:#fff;text-transform:uppercase;font-weight:700;font-size:13px;line-height:13px;font-size:1.3rem;line-height:1.3rem;transition:all .4s}ul.site__header__main-menu li a:active,ul.site__header__main-menu li a:focus,ul.site__header__main-menu li a:hover{color:#f6d500}@media screen and (max-width:999px){ul.site__header__main-menu li a{display:block!important;padding:1rem 1.4rem;font-size:18px;line-height:18px;font-size:1.8rem;line-height:1.8rem}}ul.site__header__main-menu li.menu-item--button-primary{margin-left:1rem;background:#f6d500}@media screen and (max-width:999px){ul.site__header__main-menu li.menu-item--button-primary{margin-left:0}}ul.site__header__main-menu li.menu-item--button-primary a{font-size:1.3rem!important;line-height:1!important;margin-bottom:0!important}@media screen and (max-width:999px){ul.site__header__main-menu li.menu-item--button-primary a{font-size:2rem!important;line-height:1!important}}ul.site__header__main-menu li.menu-item--button-secondary{margin-left:1rem}@media screen and (max-width:999px){ul.site__header__main-menu li.menu-item--button-secondary{margin-left:0}}ul.site__header__main-menu li.menu-item--button-secondary a{font-size:1.3rem!important;line-height:1!important;margin-bottom:0!important}@media screen and (max-width:999px){ul.site__header__main-menu li.menu-item--button-secondary a{font-size:2rem!important;line-height:1!important}}.site__header__nav__mobile-menu-toggle{z-index:2}.site__header__nav__mobile-menu-toggle:active,.site__header__nav__mobile-menu-toggle:focus,.site__header__nav__mobile-menu-toggle:hover{outline:none}@media screen and (max-width:999px){.site__header__nav__mobile-menu-toggle{display:block;position:absolute;top:2rem;right:2rem}}@media screen and (min-width:1000px){.site__header__nav__mobile-menu-toggle{display:none}}
+
+/* Bob */.btn,ul.site__header__main-menu li.menu-item--button-primary a,ul.site__header__main-menu li.menu-item--button-secondary a{padding:1.2rem 2.5rem;background:#dce2e5;font-weight:900;text-transform:uppercase;font-size:1.4rem;line-height:1.6rem;display:inline-block;transition:all .4s;margin-bottom:.833rem;margin-left:.25rem;margin-right:.25rem}@media (hover:hover){.btn:active,.btn:focus,.btn:hover,ul.site__header__main-menu li.menu-item--button-primary a:active,ul.site__header__main-menu li.menu-item--button-primary a:focus,ul.site__header__main-menu li.menu-item--button-primary a:hover,ul.site__header__main-menu li.menu-item--button-secondary a:active,ul.site__header__main-menu li.menu-item--button-secondary a:focus,ul.site__header__main-menu li.menu-item--button-secondary a:hover{background:#f6d500}}@media screen and (min-width:768px){.btn.btn--large,ul.site__header__main-menu li.menu-item--button-primary a.btn--large,ul.site__header__main-menu li.menu-item--button-secondary a.btn--large{font-size:16px;line-height:18px;font-size:1.6rem;line-height:1.8rem;padding:1.8rem 4rem}}.btn--primary,ul.site__header__main-menu li.menu-item--button-primary a{background:#f6d500;color:#222!important}@media (hover:hover){.btn--primary:active,.btn--primary:focus,.btn--primary:hover,ul.site__header__main-menu li.menu-item--button-primary a:active,ul.site__header__main-menu li.menu-item--button-primary a:focus,ul.site__header__main-menu li.menu-item--button-primary a:hover{background:#ac9500;color:#fff!important}}@media screen and (min-width:768px){.btn--primary.btn--large,ul.site__header__main-menu li.menu-item--button-primary a.btn--large{font-size:16px;line-height:18px;font-size:1.6rem;line-height:1.8rem;padding:1.8rem 4rem}}.btn--primary.btn--white,.large-feature--yellow .btn--primary,.large-feature--yellow ul.site__header__main-menu li.menu-item--button-primary a,.large-feature--yellow ul.site__header__main-menu li.menu-item--button-secondary a.btn--primary,ul.site__header__main-menu li.menu-item--button-primary .large-feature--yellow a,ul.site__header__main-menu li.menu-item--button-primary a.btn--white,ul.site__header__main-menu li.menu-item--button-secondary .large-feature--yellow a.btn--primary,ul.site__header__main-menu li.menu-item--button-secondary .large-feature--yellow li.menu-item--button-primary a{background:#fff}@media (hover:hover){.btn--primary.btn--white:active,.btn--primary.btn--white:focus,.btn--primary.btn--white:hover,.large-feature--yellow .btn--primary:active,.large-feature--yellow .btn--primary:focus,.large-feature--yellow .btn--primary:hover,.large-feature--yellow ul.site__header__main-menu li.menu-item--button-primary a:active,.large-feature--yellow ul.site__header__main-menu li.menu-item--button-primary a:focus,.large-feature--yellow ul.site__header__main-menu li.menu-item--button-primary a:hover,ul.site__header__main-menu li.menu-item--button-primary .large-feature--yellow a:active,ul.site__header__main-menu li.menu-item--button-primary .large-feature--yellow a:focus,ul.site__header__main-menu li.menu-item--button-primary .large-feature--yellow a:hover,ul.site__header__main-menu li.menu-item--button-primary a.btn--white:active,ul.site__header__main-menu li.menu-item--button-primary a.btn--white:focus,ul.site__header__main-menu li.menu-item--button-primary a.btn--white:hover,ul.site__header__main-menu li.menu-item--button-secondary .large-feature--yellow li.menu-item--button-primary a:active,ul.site__header__main-menu li.menu-item--button-secondary .large-feature--yellow li.menu-item--button-primary a:focus,ul.site__header__main-menu li.menu-item--button-secondary .large-feature--yellow li.menu-item--button-primary a:hover{background:#ac9500;color:#fff!important}}.btn--secondary,ul.site__header__main-menu li.menu-item--button-secondary a{background:transparent;border:.2rem solid #f6d500;color:#f6d500;padding:1rem 2.5rem}@media (hover:hover){.btn--secondary:active,.btn--secondary:focus,.btn--secondary:hover,ul.site__header__main-menu li.menu-item--button-secondary a:active,ul.site__header__main-menu li.menu-item--button-secondary a:focus,ul.site__header__main-menu li.menu-item--button-secondary a:hover{color:#ac9500;border:.2rem solid #c5aa00;background:transparent}}@media screen and (min-width:768px){.btn--secondary.btn--large,ul.site__header__main-menu li.menu-item--button-secondary a.btn--large{font-size:16px;line-height:18px;font-size:1.6rem;line-height:1.8rem;padding:1.6rem 4rem}}.btn--secondary.btn--white,.large-feature--yellow .btn--secondary,.large-feature--yellow ul.site__header__main-menu li.menu-item--button-primary a.btn--secondary,.large-feature--yellow ul.site__header__main-menu li.menu-item--button-secondary a,ul.site__header__main-menu li.menu-item--button-primary .large-feature--yellow a.btn--secondary,ul.site__header__main-menu li.menu-item--button-secondary .large-feature--yellow a,ul.site__header__main-menu li.menu-item--button-secondary a.btn--white{border-color:#fff;color:#fff}@media (hover:hover){.btn--secondary.btn--white:active,.btn--secondary.btn--white:focus,.btn--secondary.btn--white:hover,.large-feature--yellow .btn--secondary:active,.large-feature--yellow .btn--secondary:focus,.large-feature--yellow .btn--secondary:hover,.large-feature--yellow ul.site__header__main-menu li.menu-item--button-secondary a:active,.large-feature--yellow ul.site__header__main-menu li.menu-item--button-secondary a:focus,.large-feature--yellow ul.site__header__main-menu li.menu-item--button-secondary a:hover,ul.site__header__main-menu li.menu-item--button-secondary .large-feature--yellow a:active,ul.site__header__main-menu li.menu-item--button-secondary .large-feature--yellow a:focus,ul.site__header__main-menu li.menu-item--button-secondary .large-feature--yellow a:hover,ul.site__header__main-menu li.menu-item--button-secondary a.btn--white:active,ul.site__header__main-menu li.menu-item--button-secondary a.btn--white:focus,ul.site__header__main-menu li.menu-item--button-secondary a.btn--white:hover{color:#ac9500;border:.2rem solid #c5aa00;background:transparent}}.btn,ul.site__header__main-menu li.menu-item--button-primary a,ul.site__header__main-menu li.menu-item--button-secondary a{font-size:14px;line-height:16px}body{color:#222;font-family:Lato,sans-serif;font-size:18px;line-height:1.666}.editor-post-title__input,h1,h2,h3,h4,h5,h6{font-family:Playfair Display,serif;font-size:1.8rem;line-height:1.2;margin:0 0 1.666rem;font-weight:400}.editor-post-title__input,.style-as-h1,h1{letter-spacing:-2px;font-size:76px;line-height:80px}.style-as-h2,h2{font-size:60px;line-height:65px;letter-spacing:-2px}.style-as-h3,h3{font-size:52px;line-height:56px;letter-spacing:-2px}.style-as-h4,h4{font-size:42px;line-height:45px;letter-spacing:-1px}.style-as-h5,h5{font-size:32px;line-height:35px;letter-spacing:-1px}.style-as-h6,h6{font-size:24px;line-height:28px}p{margin-top:0;margin-bottom:16.66px}.lead-paragraph{border-left:10px solid #f6d500;padding-left:20px;font-family:Playfair Display,serif;color:#888b8d;font-size:38px;line-height:60px;margin-bottom:50px}.lead-paragraph strong{color:#000}.large-feature{padding:10px}.large-feature__image{width:100%;height:18rem}.large-feature--white{border:1px solid #dce2e5}.large-feature--yellow{background:#f6d500}@media screen and (min-width:1000px){.large-feature--yellow .large-feature__title:after{background:#fff}}.large-feature--grey{background:#888b8d}.large-feature--grey .large-feature__blurb,.large-feature--grey .large-feature__meta,.large-feature--grey .large-feature__title{color:#fff}

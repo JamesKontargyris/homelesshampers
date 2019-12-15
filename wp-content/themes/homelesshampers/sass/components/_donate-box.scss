@@ -1,5 +1,7 @@
 .donate-box {
   @include container(false);
+  position: relative;
+  z-index: z('high');
   background: $yellow;
   box-shadow: 0 0.5rem 0.7rem rgba($soft-black, 0.2);
   padding:3rem 4rem;

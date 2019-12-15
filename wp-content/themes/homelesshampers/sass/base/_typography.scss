@@ -1,7 +1,7 @@
 body {
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: $base-font-size * 0.9;
+  font-size: $base-font-size * 0.85;
   line-height: $base-line-height * 0.9;
 
   @include grid-media($grid-tablet-plus) {
@@ -24,11 +24,16 @@ h6 {
 }
 
 h1, .style-as-h1 {
-  @include font-size(60, 65);
+  @include font-size(48, 52);
   letter-spacing: -0.2rem;
+
+  @include grid-media($grid-tablet-plus) {
+    @include font-size(56, 60);
+  }
 
   @include grid-media($grid-desktop) {
     @include font-size(76, 80);
+    letter-spacing: -0.4rem;
   }
 }
 
@@ -43,11 +48,11 @@ h2, .style-as-h2 {
 }
 
 h3, .style-as-h3 {
-  @include font-size(33, 35);
+  @include font-size(36, 40);
   letter-spacing: -0.1rem;
 
   @include grid-media($grid-desktop) {
-    @include font-size(46, 50);
+    @include font-size(52, 56);
     letter-spacing: -0.2rem;
   }
 }
@@ -64,9 +69,19 @@ h4, .style-as-h4 {
 h5, .style-as-h5 {
   @include font-size(27, 30);
   letter-spacing: -0.1rem;
+  margin-bottom: 2rem;
 
   @include grid-media($grid-desktop) {
     @include font-size(32, 35);
+    margin-bottom: 4rem;
+  }
+}
+
+h6, .style-as-h6 {
+  @include font-size(18, 22);
+
+  @include grid-media($grid-desktop) {
+    @include font-size(24, 28);
   }
 }
 
@@ -98,6 +113,35 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+.page__content {
+  h1, h2, h3, h4, h5, h6, p, ul {
+    max-width:$text-column-width;
+    margin-left:auto;
+    margin-right:auto;
+    padding:0 3rem;
+
+    @include grid-media($grid-desktop) {
+      padding:0;
+    }
+  }
+
+  ul {
+    display: block;
+    list-style: none;
+    padding:0 3rem;
+    list-style-image: url('img/bullet-yellow.svg');
+
+    @include grid-media($grid-desktop) {
+      padding:0;
+    }
+
+    li {
+      padding-left:1rem;
+      margin:0 0 $base-spacing 2rem;
+    }
+  }
 }
 
 // Text Helpers

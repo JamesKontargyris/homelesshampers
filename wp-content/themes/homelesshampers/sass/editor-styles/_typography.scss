@@ -1,0 +1,60 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: 18px;
+  line-height: 1.666;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.editor-post-title__input {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0 0 $base-spacing;
+  font-weight: normal;
+}
+
+h1, .style-as-h1, .editor-post-title__input {
+  letter-spacing: -2px;
+  font-size:76px;
+  line-height:80px;
+}
+
+h2, .style-as-h2 {
+  font-size:60px;
+  line-height:65px;
+  letter-spacing: -2px;
+}
+
+h3, .style-as-h3 {
+  font-size:52px;
+  line-height: 56px;
+  letter-spacing: -2px;
+}
+
+h4, .style-as-h4 {
+  font-size:42px;
+  line-height: 45px;
+  letter-spacing: -1px;
+}
+
+h5, .style-as-h5 {
+  font-size:32px;
+  line-height:35px;
+  letter-spacing: -1px;
+}
+
+h6, .style-as-h6 {
+  font-size:24px;
+  line-height:28px;
+}
+
+p {
+  margin-top:0;
+  margin-bottom:16.66px;
+}

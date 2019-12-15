@@ -1,0 +1,44 @@
+/*
+Theme Name: HomelessHampers
+Author: James Kontargyris
+Author URI: http://jameskontargyris.co.uk/
+Description: Homeless Hampers Wordpress editor styles
+Version: 1.0
+Text Domain: homelesshampers
+*/
+
+@charset "utf-8";
+
+/// Third party libraries and stylesheets
+@import
+'vendors/hamburgers/hamburgers-settings',
+'vendors/hamburgers/hamburgers',
+'vendors/bourbon/bourbon',
+'vendors/neat/neat';
+
+/// Abstracts (utilities that do not output any CSS)
+@import
+'abstracts/fonts',
+'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins',
+'abstracts/placeholders',
+'abstracts/grid';
+
+/// Base formatting and resets
+@import
+'base/normalize',
+'base/underscores',
+'base/base',
+'base/typography',
+'base/menus',
+'base/helpers',
+'base/animations';
+
+/// Components (modules)
+@import
+'components/buttons',
+'editor-styles/buttons',
+'editor-styles/typography',
+'editor-styles/lead-paragraph',
+'editor-styles/large-feature';
