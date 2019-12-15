@@ -95,3 +95,30 @@ function twitter_followers_count($twitter_handle) {
 
 	return (float) $numberOfFollowers;
 }
+
+// Disable Gutenberg editor for certain post types
+add_filter('use_block_editor_for_post_type', 'prefix_disable_gutenberg', 10, 2);
+function prefix_disable_gutenberg($current_status, $post_type)
+{
+	// Use your post type key instead of 'product'
+	if ($post_type === 'team_member') return false;
+	return $current_status;
+}
+
+
+// Get team members
+function get_team_members( $count = 9999, $offset = 0, $ignore_ids = [], $random = false ) {
+	$args = [
+		'post_status'    => 'publish',
+		'post_type'      => 'team_member',
+		'posts_per_page' => $count,
+		'post__not_in'   => $ignore_ids,
+		'offset'         => $offset,
+	];
+
+	if ( $random ) {
+		$args['orderby'] = 'rand';
+	}
+
+	return new WP_Query( $args );
+}

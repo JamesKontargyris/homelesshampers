@@ -67,6 +67,7 @@ if ( ! function_exists( 'homelesshampers_setup' ) ) :
 		add_image_size('banner', 1500, 1000, true);
 		add_image_size('photo-gallery-thumb', 600, 600, true);
 		add_image_size('supporters-showcase', 150, 100, false);
+		add_image_size('team-member', 740, 560, false);
 
 	}
 endif;
@@ -136,6 +137,7 @@ function homelesshampers_scripts() {
 	wp_enqueue_script( 'homelesshampers-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script( 'homelesshampers-main-menu', get_template_directory_uri() . '/js/main-menu.js', array(), '20191201', true );
 	wp_enqueue_script( 'homelesshampers-donate-box', get_template_directory_uri() . '/js/donate-box.js', array(), '20191202', true );
+	wp_enqueue_script( 'homelesshampers-team-members', get_template_directory_uri() . '/js/team-members.js', array(), '20191215', true );
 	wp_enqueue_script( 'homelesshampers-slick-js', get_template_directory_uri() . '/js/slick-1.8.1/slick.min.js', array(), '20191202', true );
 	wp_enqueue_script( 'homelesshampers-slick-carousels', get_template_directory_uri() . '/js/slick-carousels.js', array(), '20191202', true );
 

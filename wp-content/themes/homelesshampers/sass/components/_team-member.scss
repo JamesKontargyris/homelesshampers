@@ -1,0 +1,43 @@
+.team-member {
+  @include container;
+
+  &:not(:last-of-type) {
+    margin-bottom:6rem;
+  }
+}
+
+.team-member__photo {
+  margin-bottom:$base-spacing;
+  max-width:74rem;
+
+  @include grid-media($grid-tablet-plus) {
+    @include grid-column(4);
+  }
+}
+
+.team-member__text {
+  @include grid-media($grid-tablet-plus) {
+    @include grid-column(8);
+  }
+}
+
+.team-member__name {
+  margin-bottom:1rem;
+}
+
+.team-member__position {
+  color:$grey;
+  @include font-size(17, 24);
+  text-transform: uppercase;
+  font-weight:bold;
+}
+
+.team-member__short-bio,
+.team-member__full-bio {
+  margin-top:$base-spacing;
+}
+
+.team-member__short-bio,
+.team-member__read-more-button {
+  display: none; // this is reversed by jQuery, so the full bio is hidden and the short bio is shown, then reversed when the read more buttons is clicked
+}
