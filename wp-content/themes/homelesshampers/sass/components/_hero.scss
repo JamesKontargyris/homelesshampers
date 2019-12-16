@@ -6,6 +6,7 @@
   justify-content: center;
   margin-top: -9.5rem;
   padding: 9.5rem 3rem 3rem 3rem;
+  background:$grey; // superceded by the style on the element if a background image is available
 
   @include grid-media($grid-tablet-plus) {
     height: 90vh;
@@ -26,7 +27,7 @@
 
   @include grid-media($grid-desktop) {
     height:50vw;
-    margin-bottom:10rem;
+    margin-bottom:8rem;
   }
 
   .hero__title {

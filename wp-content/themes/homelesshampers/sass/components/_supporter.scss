@@ -1,0 +1,75 @@
+.supporter-container {
+  @include clearfix;
+  margin:5rem auto;
+  max-width: $max-container-width;
+
+  @include grid-media($grid-desktop) {
+    margin:8rem auto;
+  }
+}
+
+.supporter {
+  position: relative;
+  @include grid-column(12);
+  text-align: center;
+  border:0.2rem solid $yellow;
+  margin-bottom:2rem;
+
+  @include grid-media($grid-tablet) {
+    @include grid-column(6);
+  }
+
+  @include grid-media($grid-desktop) {
+    @include grid-column(4);
+  }
+}
+
+.supporter__content {
+  padding:3rem 4rem 8rem; // allows for absolute positioned URL block
+}
+
+.supporter__logo {
+  height:18rem;
+  width:100%;
+
+  @include grid-media($grid-tablet-plus) {
+    height:22rem;
+  }
+}
+
+.supporter__name {
+  font-weight:bold;
+  margin-bottom: 3rem;
+}
+
+.supporter__description {
+  @include grid-media($grid-tablet-plus) {
+    @include font-size(16, 22);
+  }
+}
+
+.supporter__url {
+  position: absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+
+  a {
+    display: block;
+    padding:2rem 1rem;
+    background: $yellow;
+    @include font-size(15, 15);
+    font-weight:bold;
+    color:$soft-black;
+    transition: 0.3s all;
+
+    @include no-touch {
+      &:focus,
+      &:active,
+      &:hover {
+        background:$dark-yellow;
+        color:white;
+      }
+    }
+  }
+}

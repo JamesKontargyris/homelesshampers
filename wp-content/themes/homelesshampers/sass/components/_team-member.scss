@@ -1,3 +1,12 @@
+.team-member-container {
+  margin:5rem auto;
+  max-width: $max-container-width;
+
+  @include grid-media($grid-desktop) {
+    margin:8rem auto;
+  }
+}
+
 .team-member {
   @include container;
 
@@ -19,10 +28,15 @@
   @include grid-media($grid-tablet-plus) {
     @include grid-column(8);
   }
+
+  p {
+    padding:0 !important; // counteract padding on page__content elements
+  }
 }
 
 .team-member__name {
   margin-bottom:1rem;
+  padding:0 !important; // counteract padding on page__content elements
 }
 
 .team-member__position {
