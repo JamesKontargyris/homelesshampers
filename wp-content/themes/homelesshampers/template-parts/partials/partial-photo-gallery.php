@@ -1,4 +1,4 @@
-<?php if ( get_field( 'home_show_photo_gallery' ) ) : ?>
+<?php if ( get_field( 'home_show_photo_gallery' ) && get_field( 'home_photo_gallery_photos' ) ) : ?>
 
     <section class="photo-gallery">
         <div class="photo-gallery__yellow-bar"></div>
