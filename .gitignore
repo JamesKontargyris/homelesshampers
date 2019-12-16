@@ -104,3 +104,4 @@ node_modules/
 !wp-content/themes/homelesshampers
 !composer.json
 !package.json
+!favicon.ico
