@@ -6,29 +6,30 @@ textarea {
   @include font-size(16, 18);
   font-family: $base-font-family;
   @include rem('padding', 8px);
-  border:1px solid $grey;
+  border: 1px solid $grey;
 }
 
 input[type=submit] {
-  text-shadow:none;
-  box-shadow:none;
+  text-shadow: none;
+  box-shadow: none;
   background: none;
-  border:none;
+  border: none;
   @extend .btn;
   @extend .btn--primary;
+  font-family: $base-font-family;
 }
 
 .ajax-loader {
-  background-color:white;
-  border-radius:50%;
+  background-color: white;
+  border-radius: 50%;
 }
 
 .input--full-span {
-  width:100%;
+  width: 100%;
 }
 
 label {
-  display:block;
+  display: block;
   @include font-weight('medium');
   @include rem('margin-bottom', $small-spacing);
 }
@@ -42,7 +43,7 @@ body input[type=text].wpcf7-not-valid, body input[type=email].wpcf7-not-valid, b
 body span.wpcf7-not-valid-tip {
   display: block;
   background: #ffe2e2 !important;
-  padding:3px !important;
+  padding: 3px !important;
   color: #ec3c06;
   border: none;
   position: relative;
@@ -61,12 +62,14 @@ body div.wpcf7-validation-errors {
 }
 
 body div.wpcf7-response-output {
-  margin: 10px 0;
+  margin: 10px auto;
   padding: 20px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   border-radius: 5px;
+  max-width: $max-container-width;
+  text-align: center;
 }
 
 body .wpcf7-mail-sent-ng {
@@ -88,11 +91,11 @@ body .wpcf7-mail-sent-ok {
 }
 
 .wpcf7-text {
-  width:100%;
+  width: 100%;
 }
 
 .wpcf7-textarea {
-  height:10rem;
+  height: 10rem;
   @include font-size(16, 18);
   font-family: $base-font-family;
   @include rem('padding', 8px);

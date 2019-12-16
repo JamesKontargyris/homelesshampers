@@ -120,7 +120,7 @@ picture {
     max-width:$text-column-width;
     margin-left:auto;
     margin-right:auto;
-    padding:0 3rem;
+    padding:0 2rem;
 
     @include grid-media($grid-desktop) {
       padding:0;
@@ -130,7 +130,7 @@ picture {
   ul {
     display: block;
     list-style: none;
-    padding:0 3rem;
+    padding:0 2rem;
     list-style-image: url('img/bullet-yellow.svg');
 
     @include grid-media($grid-desktop) {

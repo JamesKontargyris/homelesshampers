@@ -1,5 +1,5 @@
 .large-feature {
-  margin:0;
+  margin:$pad-small 0;
   padding:$pad-large;
 
   @include grid-media($grid-tablet) {
