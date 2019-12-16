@@ -27,6 +27,7 @@ ul.supporters-showcase__carousel {
 
   li {
     display: inline-block;
+    vertical-align: middle;
     margin:0 1rem;
 
     @include no-touch {
@@ -45,5 +46,17 @@ ul.supporters-showcase__carousel {
       margin:0 auto;
       transition: 0.3s all;
     }
+  }
+
+
+  // Centre-align images vertically
+  .slick-track {
+    display: flex;
+  }
+  .slick-track .slick-slide {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: center;
   }
 }
