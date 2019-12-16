@@ -1,6 +1,10 @@
 .large-feature {
-  margin:$pad-large 0;
+  margin:0;
   padding:$pad-large;
+
+  @include grid-media($grid-tablet) {
+    margin:$pad-large 0;
+  }
 
   @include grid-media($grid-desktop) {
     display: flex;

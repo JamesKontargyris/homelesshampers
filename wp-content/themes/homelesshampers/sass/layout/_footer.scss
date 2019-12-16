@@ -1,8 +1,8 @@
 .site__footer {
-  margin-top:$base-spacing * 6;
+  margin-top:5rem;
 
   @include grid-media($grid-desktop) {
-    margin-top:$base-spacing * 8;
+    margin-top:12rem;
   }
 }
 

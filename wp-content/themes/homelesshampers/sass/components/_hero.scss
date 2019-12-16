@@ -41,10 +41,7 @@
     padding:1.5rem 1rem;
 
     @include grid-media($grid-tablet-plus) {
-      padding:2.5rem 4.5rem 2.5rem 1rem;
-      text-align: right;
-      right:20%;
-      width:auto;
+      padding:2.5rem 1rem;
     }
 
     @include grid-media($grid-desktop) {

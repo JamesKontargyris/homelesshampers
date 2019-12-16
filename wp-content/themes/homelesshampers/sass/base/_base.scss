@@ -10,6 +10,13 @@ body {
   overflow-x: hidden;
 }
 
+hr {
+  margin:4rem auto;
+  max-width:8rem;
+  height:0.2rem;
+  background: $yellow;
+}
+
 .page,
 .post {
   margin:0;

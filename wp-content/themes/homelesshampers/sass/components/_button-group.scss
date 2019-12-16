@@ -1,7 +1,12 @@
 .button-group {
   @include container;
-  margin-top:10rem;
-  margin-bottom:10rem;
+  margin-top:5rem;
+  margin-bottom:5rem;
+
+  @include grid-media($grid-desktop) {
+    margin-top:10rem;
+    margin-bottom:10rem;
+  }
 }
 
 .button-group--left {
