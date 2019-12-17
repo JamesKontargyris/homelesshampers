@@ -20,6 +20,6 @@
                        class="btn btn--<?php block_sub_field('large_feature_button_type'); ?>"><?php block_sub_field('large_feature_button_text'); ?></a>
 				<?php endwhile; ?>
             </div>
-		<?php endif; ?>
+		<?php endif; reset_block_rows( 'large_feature_buttons' ); ?>
     </div>
 </section>

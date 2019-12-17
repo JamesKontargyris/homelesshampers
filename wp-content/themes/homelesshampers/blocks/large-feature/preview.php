@@ -20,7 +20,7 @@
 					   class="btn btn--<?php block_sub_field('large_feature_button_type'); ?>"><?php block_sub_field('large_feature_button_text'); ?></a>
 				<?php endwhile; ?>
 			</div>
-		<?php endif; ?>
+		<?php endif; reset_block_rows('large_feature_buttons'); ?>
 	</div>
 
 	<em class="large-feature__meta"><?php if(block_value('large_feature_layout') == 'left') : ?>Image left, text right <?php else : ?>Text left, image right<?php endif; ?></em>
