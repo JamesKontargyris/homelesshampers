@@ -63,7 +63,7 @@ $homepage_id = get_option( 'page_on_front' ); // footer fields are managed on th
 			?>
 
             <div class="site__footer__legal__copyright">
-                &copy; Homeless Hampers 2019. All rights reserved.<br>Registered charity number 12345678. <a
+                &copy; Homeless Hampers 2019. All rights reserved.<br>Registered charity number 1187729. <a
                         href="<?php echo get_privacy_policy_url(); ?>">Privacy policy</a>
             </div>
 
