@@ -108,13 +108,13 @@ add_action( 'after_setup_theme', 'homelesshampers_content_width', 0 );
  */
 function homelesshampers_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'homelesshampers' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'homelesshampers' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'name'          => esc_html__( 'Footer', 'homelesshampers' ),
+		'id'            => 'footer',
+		'description'   => esc_html__( 'Add footer widgets here.', 'homelesshampers' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
 	) );
 }
 
