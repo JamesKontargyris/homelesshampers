@@ -155,10 +155,10 @@
   padding:3rem;
 
   @include grid-media($grid-desktop) {
-    padding:3rem 1rem;
+    padding:5rem 1rem 3rem;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: row-reverse;
   }
 }
@@ -171,8 +171,8 @@
     padding-left:4rem;
     margin-bottom:0;
     text-align: left;
-    background: url(img/homelesshampers_logomark_mono_white.svg) left center no-repeat;
-    background-size: contain;
+    background: url(img/homelesshampers_logomark_mono_white.svg) left top no-repeat;
+    background-size: 2.5rem;
 
   }
 }
