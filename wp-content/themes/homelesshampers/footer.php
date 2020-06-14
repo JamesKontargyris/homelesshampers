@@ -47,8 +47,19 @@ $homepage_id = get_option( 'page_on_front' ); // footer fields are managed on th
             <div class="site__footer__donate-box">
                 <h5><?php the_field( 'footer_donate_box_title', $homepage_id ); ?></h5>
                 <p><?php the_field( 'footer_donate_box_blurb', $homepage_id ); ?></p>
-                <form action="/" method="POST" class="site__footer__donate-box__form">
-                    <input type="text" name="amount" placeholder="Enter amount...">
+                <form action="https://www.nowdonate.com/checkout" method="POST" target="_blank"
+                      class="site__footer__donate-box__form">
+                    <input type="hidden" name="nowDonate" value="true"/>
+                    <input type="hidden" name="charitySelect" value="21277"/>
+                    <input type="hidden" name="checkoutColour1" value="f6d500"/>
+                    <input type="hidden" name="checkoutColour2" value="000000"/>
+                    <input type="hidden" name="checkoutBackground" value="1589.jpg"/>
+                    <input type="hidden" name="checkoutAppeal" value=""/>
+                    <input type="hidden" name="donationCurrency" value="GBP"/>
+                    <input type="hidden" name="widget" value="true"/>
+                    <input type="hidden" name="checkoutKey" value="9gk8uje3rdt130503tl4"/>
+                    <input type="text" name="donationAmount" placeholder="Enter amount..."/>
+
                     <button type="submit"><?php the_field( 'footer_donate_box_button_text', $homepage_id ); ?></button>
                 </form>
             </div>

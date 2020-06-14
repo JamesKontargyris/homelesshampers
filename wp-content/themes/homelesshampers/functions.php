@@ -137,7 +137,6 @@ function homelesshampers_scripts() {
 
 	wp_enqueue_script( 'homelesshampers-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 	wp_enqueue_script( 'homelesshampers-main-menu', get_template_directory_uri() . '/js/main-menu.js', array(), '20191201', true );
-	wp_enqueue_script( 'homelesshampers-donate-box', get_template_directory_uri() . '/js/donate-box.js', array(), '20191202', true );
 	wp_enqueue_script( 'homelesshampers-team-members', get_template_directory_uri() . '/js/team-members.js', array(), '20191215', true );
 	wp_enqueue_script( 'homelesshampers-match-height-inits', get_template_directory_uri() . '/js/match-height-inits.js', array(), '20191215', true );
 	wp_enqueue_script( 'homelesshampers-slick-js', get_template_directory_uri() . '/js/slick-1.8.1/slick.min.js', array(), '20191202', true );

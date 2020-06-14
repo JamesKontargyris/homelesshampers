@@ -54,11 +54,7 @@ ul.donate-box__form__buttons {
   li {
     margin:0 0.5rem 0.5rem;
 
-    @include grid-media($grid-desktop) {
-      margin-bottom:0;
-    }
-
-    a.donate-box__form__amount-button,
+    button.donate-box__form__amount-button,
     button.donate-box__form__submit-button {
       display: block;
       background:transparent;
