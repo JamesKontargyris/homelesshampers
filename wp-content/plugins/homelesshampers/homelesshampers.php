@@ -4,6 +4,11 @@ Plugin Name: Site Plugin for Homeless Hampers website
 Description: Site specific code changes for Homeless Hampers website
 */
 
+require_once( ABSPATH . 'vendor/autoload.php' ); // autoload composer packages
+
+$dotenv = Dotenv\Dotenv::createImmutable( ABSPATH );
+$dotenv->load();
+
 function facebook_likes_count( $page_id ) {
 	// customize: "https://facebook.com/[customize]"
 	$url = "https://facebook.com/$page_id"; // by name
@@ -27,8 +32,8 @@ function facebook_likes_count( $page_id ) {
 
 function twitter_followers_count( $twitter_handle ) {
 	// some variables
-	$consumerKey    = '9qhp6sDB5gPRLCu7kpz6ZhPUx';
-	$consumerSecret = '2ihCoES3hl154ZVMCKqFdGKHw0UuoOwILh3GbJYQkcJw53hEy3';
+	$consumerKey    = $_ENV['TWITTER_CONSUMER_KEY'];
+	$consumerSecret = $_ENV['TWITTER_CONSUMER_SECRET'];
 	$token          = get_option( 'cfTwitterToken' );
 
 	// get follower count from cache
