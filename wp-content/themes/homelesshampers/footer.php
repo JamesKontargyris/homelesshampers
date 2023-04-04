@@ -24,9 +24,6 @@ $homepage_id = get_option( 'page_on_front' ); // footer fields are managed on th
                     <div class="site__footer__social-media__title site__footer__social-media__title--facebook">
 						<?php the_field( 'footer_facebook_title', $homepage_id ); ?>
                     </div>
-                    <p class="site__footer__social-media__number">
-						<?php echo facebook_likes_count( get_field( 'footer_facebook_page_id', $homepage_id ) ); ?>
-                    </p>
                     <a href="https://facebook.com/<?php the_field( 'footer_facebook_page_id', $homepage_id ) ?>"
                        target="_blank"
                        class="btn btn--secondary"><?php the_field( 'footer_facebook_button_text', $homepage_id ); ?></a>
@@ -35,9 +32,6 @@ $homepage_id = get_option( 'page_on_front' ); // footer fields are managed on th
                     <div class="site__footer__social-media__title site__footer__social-media__title--twitter">
 						<?php the_field( 'footer_twitter_title', $homepage_id ); ?>
                     </div>
-                    <p class="site__footer__social-media__number">
-						<?php echo number_format( twitter_followers_count( get_field( 'footer_twitter_handle', $homepage_id ) ) ); ?>
-                    </p>
                     <a href="https://twitter.com/<?php the_field( 'footer_twitter_handle', $homepage_id ) ?>"
                        target="_blank"
                        class="btn btn--secondary"><?php the_field( 'footer_twitter_button_text', $homepage_id ); ?></a>
