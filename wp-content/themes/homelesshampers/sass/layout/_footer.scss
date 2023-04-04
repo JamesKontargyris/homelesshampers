@@ -53,6 +53,7 @@
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
+  padding-bottom: 2rem;
 }
 
 @include grid-media($grid-desktop) {
